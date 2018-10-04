@@ -7,6 +7,9 @@
 //
 
 import UIKit
+import Then
+import SnapKit
+import RxSwiftExtensions
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -22,11 +25,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     // MARK Window
     var window: UIWindow?
+    public private(set) lazy var navigationController = UINavigationController(rootViewController: self.rootViewController).then {
+        $0.navigationBar.prefersLargeTitles = true
+    }
     public private(set) lazy var rootViewController: UIViewController = SampleListViewController()
     
     private func setupWindow() {
         window = UIWindow(frame: UIScreen.main.bounds)
-        window?.rootViewController = rootViewController
+        window?.rootViewController = navigationController
         window?.makeKeyAndVisible()
     }
 }
