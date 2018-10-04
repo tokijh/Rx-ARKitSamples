@@ -43,7 +43,6 @@ class SampleListViewController: UIViewController, View {
     private func bind(state: Observable<State>) {
         state.map({ $0.shouldMoveToVC })
             .filterNil()
-            .distinctUntilChanged()
             .subscribe(onNext: { [weak self] vc in
                 self?.navigationController?.pushViewController(vc, animated: true)
             })
