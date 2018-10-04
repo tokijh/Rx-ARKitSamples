@@ -1,0 +1,53 @@
+PODS:
+  - ReactorKit (1.2.0):
+    - RxSwift (>= 4.0.0)
+  - RxCocoa (4.3.1):
+    - RxSwift (~> 4.0)
+  - RxOptional (3.5.0):
+    - RxCocoa (~> 4.0)
+    - RxSwift (~> 4.0)
+  - RxSwift (4.3.1)
+  - RxSwiftExtensions (1.2.0):
+    - RxCocoa (>= 4.3)
+    - RxOptional (>= 3.5)
+    - RxSwift (>= 4.3)
+    - RxViewController
+  - RxViewController (0.3.0):
+    - RxCocoa (>= 4.0.0)
+    - RxSwift (>= 4.0.0)
+  - SnapKit (4.0.1)
+  - Then (2.4.0)
+
+DEPENDENCIES:
+  - ReactorKit
+  - RxCocoa
+  - RxOptional
+  - RxSwift
+  - RxSwiftExtensions
+  - SnapKit
+  - Then
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - ReactorKit
+    - RxCocoa
+    - RxOptional
+    - RxSwift
+    - RxSwiftExtensions
+    - RxViewController
+    - SnapKit
+    - Then
+
+SPEC CHECKSUMS:
+  ReactorKit: 18ca466f1e77fef1827addeb921fba8ae14edd63
+  RxCocoa: 78763c7b07d02455598d9fc3c1ad091a28b73635
+  RxOptional: bd32ff8ca9df4177683d56ffeb618a9d4d5d5cad
+  RxSwift: fe0fd770a43acdb7d0a53da411c9b892e69bb6e4
+  RxSwiftExtensions: f4ccbfa82ca3fe0b639c765372593e486fe4c00a
+  RxViewController: 203510707e73dd95f147f0c387710e3ec80d2b0f
+  SnapKit: 0de968a9fec17499afa29683b05d0c775b6d1c29
+  Then: 71866660c7af35a7343831f7668e7cd2b62ee0f2
+
+PODFILE CHECKSUM: aeaab5f31b900f48b3ad9417421ed4536c6601b6
+
+COCOAPODS: 1.5.3

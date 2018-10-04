@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		28D158D3B650C32A7B04111D /* Pods_Rx_ARKitSamples.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E843C2888932326479906530 /* Pods_Rx_ARKitSamples.framework */; };
 		6043B46B2165FAA900BD016D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6043B46A2165FAA900BD016D /* AppDelegate.swift */; };
 		6043B46D2165FAA900BD016D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6043B46C2165FAA900BD016D /* ViewController.swift */; };
 		6043B4702165FAA900BD016D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6043B46E2165FAA900BD016D /* Main.storyboard */; };
@@ -15,6 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0718FB275E77D745B3B0A760 /* Pods-Rx+ARKitSamples.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Rx+ARKitSamples.release.xcconfig"; path = "Pods/Target Support Files/Pods-Rx+ARKitSamples/Pods-Rx+ARKitSamples.release.xcconfig"; sourceTree = "<group>"; };
 		6043B4672165FAA900BD016D /* Rx+ARKitSamples.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Rx+ARKitSamples.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6043B46A2165FAA900BD016D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6043B46C2165FAA900BD016D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +24,8 @@
 		6043B4712165FAAA00BD016D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6043B4742165FAAA00BD016D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6043B4762165FAAA00BD016D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9225FF9BBF4226A12612C447 /* Pods-Rx+ARKitSamples.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Rx+ARKitSamples.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Rx+ARKitSamples/Pods-Rx+ARKitSamples.debug.xcconfig"; sourceTree = "<group>"; };
+		E843C2888932326479906530 /* Pods_Rx_ARKitSamples.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Rx_ARKitSamples.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +33,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				28D158D3B650C32A7B04111D /* Pods_Rx_ARKitSamples.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2685E0AA5477D7CA5473D12A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9225FF9BBF4226A12612C447 /* Pods-Rx+ARKitSamples.debug.xcconfig */,
+				0718FB275E77D745B3B0A760 /* Pods-Rx+ARKitSamples.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		6043B45E2165FAA900BD016D = {
 			isa = PBXGroup;
 			children = (
 				6043B4692165FAA900BD016D /* Rx+ARKitSamples */,
 				6043B4682165FAA900BD016D /* Products */,
+				2685E0AA5477D7CA5473D12A /* Pods */,
+				D8320C58D8FCCA2AD35A9610 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -64,6 +80,14 @@
 			path = "Rx+ARKitSamples";
 			sourceTree = "<group>";
 		};
+		D8320C58D8FCCA2AD35A9610 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E843C2888932326479906530 /* Pods_Rx_ARKitSamples.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -71,9 +95,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6043B4792165FAAA00BD016D /* Build configuration list for PBXNativeTarget "Rx+ARKitSamples" */;
 			buildPhases = (
+				79DE1306FC4AC97F1BDEF7EB /* [CP] Check Pods Manifest.lock */,
 				6043B4632165FAA900BD016D /* Sources */,
 				6043B4642165FAA900BD016D /* Frameworks */,
 				6043B4652165FAA900BD016D /* Resources */,
+				9AD255FAA2250FF8229E218A /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -129,6 +155,67 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		79DE1306FC4AC97F1BDEF7EB /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Rx+ARKitSamples-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9AD255FAA2250FF8229E218A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Rx+ARKitSamples/Pods-Rx+ARKitSamples-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/ReactorKit/ReactorKit.framework",
+				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/RxOptional/RxOptional.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwiftExtensions/RxSwiftExtensions.framework",
+				"${BUILT_PRODUCTS_DIR}/RxViewController/RxViewController.framework",
+				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
+				"${BUILT_PRODUCTS_DIR}/Then/Then.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReactorKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxOptional.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwiftExtensions.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxViewController.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Then.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Rx+ARKitSamples/Pods-Rx+ARKitSamples-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		6043B4632165FAA900BD016D /* Sources */ = {
@@ -280,6 +367,7 @@
 		};
 		6043B47A2165FAAA00BD016D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9225FF9BBF4226A12612C447 /* Pods-Rx+ARKitSamples.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -298,6 +386,7 @@
 		};
 		6043B47B2165FAAA00BD016D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0718FB275E77D745B3B0A760 /* Pods-Rx+ARKitSamples.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
