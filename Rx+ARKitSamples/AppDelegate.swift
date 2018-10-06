@@ -25,7 +25,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     // MARK Window
     var window: UIWindow?
-    public private(set) lazy var navigationController = UINavigationController(rootViewController: self.rootViewController).then {
+    public private(set) lazy var navigationController = BaseNavigationController(rootViewController: self.rootViewController).then {
         $0.navigationBar.prefersLargeTitles = true
     }
     public private(set) lazy var rootViewController: UIViewController = SampleListViewController()
