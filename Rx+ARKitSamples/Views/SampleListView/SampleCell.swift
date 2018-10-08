@@ -50,13 +50,13 @@ class SampleCell: UITableViewCell, View {
         contentView.addSubview(titleLabel)
         titleLabel.snp.makeConstraints {
             $0.top.left.equalToSuperview().offset(16)
-            $0.right.greaterThanOrEqualToSuperview().offset(-16)
+            $0.right.lessThanOrEqualToSuperview().offset(-16)
         }
         contentView.addSubview(descriptionLabel)
         descriptionLabel.snp.makeConstraints {
             $0.top.equalTo(titleLabel.snp.bottom).offset(4)
             $0.left.equalTo(titleLabel)
-            $0.right.greaterThanOrEqualToSuperview().offset(-16)
+            $0.right.lessThanOrEqualToSuperview().offset(-16)
             $0.bottom.equalToSuperview().offset(-16)
         }
     }
@@ -75,6 +75,7 @@ class SampleCell: UITableViewCell, View {
     public private(set) lazy var descriptionLabel: UILabel = UILabel().then {
         $0.font = UIFont.systemFont(ofSize: 14)
         $0.textColor = UIColor.black
+        $0.numberOfLines = 0
     }
     
     private func bindDescriptionLabel(state: Observable<State>) {
