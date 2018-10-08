@@ -11,5 +11,19 @@ import UIKit
 public struct Sample {
     let title: String
     let description: String
-    let controller: UIViewController
+    let controller: Controller
+    
+    enum Controller {
+        case simple
+        case planeDetection
+    }
+}
+
+extension Sample.Controller {
+    var vc: UIViewController {
+        switch self {
+        case .simple: return SimpleViewController()
+        case .planeDetection: return PlaneDetectionViewController()
+        }
+    }
 }

@@ -41,19 +41,12 @@ class SampleListViewController: UIViewController, View {
     }
     
     private func bind(state: Observable<State>) {
-        state.map({ $0.shouldMoveToVC })
-            .filterNil()
-            .subscribe(onNext: { [weak self] vc in
-                self?.navigationController?.pushViewController(vc, animated: true)
-            })
-            .disposed(by: disposeBag)
+        bindView(state: state)
         bindTableView(state: state)
     }
     
     private func bind(action: ActionSubject<Action>) {
-        rx.viewDidLoad.map({ Action.refresh })
-            .bind(to: action)
-            .disposed(by: disposeBag)
+        bindView(action: action)
         bindTableView(action: action)
     }
     
@@ -69,6 +62,21 @@ class SampleListViewController: UIViewController, View {
         tableView.snp.makeConstraints {
             $0.edges.equalToSuperview()
         }
+    }
+    
+    private func bindView(state: Observable<State>) {
+        state.map({ $0.shouldMoveToVC })
+            .filterNil()
+            .subscribe(onNext: { [weak self] vc in
+                self?.navigationController?.pushViewController(vc, animated: true)
+            })
+            .disposed(by: disposeBag)
+    }
+    
+    private func bindView(action: ActionSubject<Action>) {
+        rx.viewDidLoad.map({ Action.refresh })
+            .bind(to: action)
+            .disposed(by: disposeBag)
     }
     
     // MARK TableView

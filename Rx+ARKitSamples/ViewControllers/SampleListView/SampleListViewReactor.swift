@@ -20,7 +20,7 @@ class SampleListViewReactor: Reactor {
         case setRefreshing(Bool)
         case setLoading(Bool)
         case setSamples([Sample])
-        case move(to: UIViewController)
+        case move(to: UIViewController?)
     }
     
     struct State {
@@ -39,7 +39,7 @@ class SampleListViewReactor: Reactor {
         self.sampleService = sampleService
     }
     
-    func mutate(action: SampleListViewReactor.Action) -> Observable<Mutation> {
+    func mutate(action: Action) -> Observable<Mutation> {
         switch action {
         case .refresh:
             guard !currentState.isRefreshing,
@@ -54,12 +54,12 @@ class SampleListViewReactor: Reactor {
             return .concat([startRefreshing, setSamples, endRefreshing])
         case let .select(sampleReactor):
             let sample = sampleReactor.currentState.sample
-            let vc = sample.controller
-            return Observable.just(Mutation.move(to: vc))
+            let vc = sample.controller.vc
+            return Observable.concat(.just(.move(to: vc)), .just(.move(to: nil)))
         }
     }
     
-    func reduce(state: SampleListViewReactor.State, mutation: SampleListViewReactor.Mutation) -> SampleListViewReactor.State {
+    func reduce(state: State, mutation: Mutation) -> State {
         var state = state
         switch mutation {
         case let .setRefreshing(isRefreshing):
