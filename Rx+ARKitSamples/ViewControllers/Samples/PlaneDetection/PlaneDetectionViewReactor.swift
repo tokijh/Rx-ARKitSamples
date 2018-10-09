@@ -53,18 +53,17 @@ class PlaneDetectionViewReactor: Reactor {
             let pause = Observable.just(Mutation.pause(shouldPause: true))
             return Observable.concat(setNavigationBarHidden, pause)
         case let .didAdd(node, planeAnchor):
-            let contents: Any
-            switch planeAnchor.alignment {
-            case .horizontal:
-                contents = UIColor.blue.withAlphaComponent(0.3)
-            case .vertical:
-                contents = UIColor.red.withAlphaComponent(0.3)
+            addPlane(node: node, planeAnchor: planeAnchor)
+            if #available(iOS 11.3, *) {
+                addMeshPlane(node: node, planeAnchor: planeAnchor)
             }
-            planeAnchor.addPlaneNode(on: node, contents: contents)
-            return Observable.empty()
+            return .empty()
         case let .didUpdate(node, planeAnchor):
-            planeAnchor.updatePlaneNode(on: node)
-            return Observable.empty()
+            updatePlane(node: node, planeAnchor: planeAnchor)
+            if #available(iOS 11.3, *) {
+                updateMeshPlane(node: node, planeAnchor: planeAnchor)
+            }
+            return .empty()
         }
     }
     
@@ -85,5 +84,42 @@ class PlaneDetectionViewReactor: Reactor {
             state.isNavigationBarHidden = isHidden
         }
         return state
+    }
+    
+    // MARK Device
+    private let device: MTLDevice = MTLCreateSystemDefaultDevice()!
+    
+    // MARK Nodes
+    private func addPlane(node: SCNNode, planeAnchor: ARPlaneAnchor) {
+        let contents: Any
+        switch planeAnchor.alignment {
+        case .horizontal:
+            contents = UIColor.blue.withAlphaComponent(0.3)
+        case .vertical:
+            contents = UIColor.red.withAlphaComponent(0.3)
+        }
+        let planeGeometry = PlaneGeometry(name: "PlaneGeometry", contents: contents)
+        let plane = Plane(name: "Plane", planeGeometry: planeGeometry, anchor: planeAnchor)
+        node.addChildNode(plane)
+    }
+    
+    private func updatePlane(node: SCNNode, planeAnchor: ARPlaneAnchor) {
+        node.planes.forEach({
+            $0.update(anchor: planeAnchor)
+        })
+    }
+    
+    @available(iOS 11.3, *)
+    private func addMeshPlane(node: SCNNode, planeAnchor: ARPlaneAnchor) {
+        guard let arscnPlaneGeometry = ARSCNPlaneGeometry(name: "ARSCNPlaneGeometry", device: device, contents: UIColor.green.withAlphaComponent(0.3)) else { return }
+        let meshPlane = MeshPlane(name: "MeshPlane", planeGeometry: arscnPlaneGeometry, anchor: planeAnchor)
+        node.addChildNode(meshPlane)
+    }
+    
+    @available(iOS 11.3, *)
+    private func updateMeshPlane(node: SCNNode, planeAnchor: ARPlaneAnchor) {
+        node.meshPlanes.forEach({
+            $0.update(anchor: planeAnchor)
+        })
     }
 }
