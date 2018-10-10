@@ -120,6 +120,15 @@ class VideoPlayerViewController: UIViewController, View {
             .map({ Action.didUpdate(node: $0.node, planeAnchor: $0.planeAnchor) })
             .bind(to: action)
             .disposed(by: disposeBag)
+        sceneView.rx.didRemove
+            .map({ (node, anchor) -> (node: SCNNode, planeAnchor: ARPlaneAnchor)? in
+                guard let planeAnchor = anchor as? ARPlaneAnchor else { return nil }
+                return (node, planeAnchor)
+            })
+            .filterNil()
+            .map({ Action.didRemove(node: $0.node, planeAnchor: $0.planeAnchor) })
+            .bind(to: action)
+            .disposed(by: disposeBag)
         bindSceneViewGesture(action: action)
     }
     
