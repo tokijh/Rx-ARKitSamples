@@ -98,7 +98,7 @@ class PlaneDetectionViewReactor: Reactor {
         case .vertical:
             contents = UIColor.red.withAlphaComponent(0.3)
         }
-        let planeGeometry = PlaneGeometry(name: "PlaneGeometry", contents: contents)
+        let planeGeometry = BorderedPlaneGeometry(name: "BorderedPlaneGeometry", contents: contents)
         let plane = Plane(name: "Plane", planeGeometry: planeGeometry, anchor: planeAnchor)
         node.addChildNode(plane)
     }
@@ -120,6 +120,7 @@ class PlaneDetectionViewReactor: Reactor {
     private func updateMeshPlane(node: SCNNode, planeAnchor: ARPlaneAnchor) {
         node.meshPlanes.forEach({
             $0.update(anchor: planeAnchor)
+            $0.position = SCNVector3(0, 0.001, 0) // Rise a little
         })
     }
 }

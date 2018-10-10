@@ -12,14 +12,6 @@ class PlaneGeometry: SCNPlane {
     convenience init(name: String, contents: Any) {
         self.init(name: name)
         firstMaterial?.diffuse.contents = contents
-        guard let path = Bundle.main.path(forResource: "wireframe_shader", ofType: "metal", inDirectory: "Assets.scnassets")
-            else { fatalError("Can't find wireframe shader") }
-        do {
-            let shader = try String(contentsOfFile: path, encoding: .utf8)
-            firstMaterial?.shaderModifiers = [.surface: shader]
-        } catch {
-            fatalError("Can't load wireframe shader: \(error)")
-        }
     }
     
     init(name: String) {
