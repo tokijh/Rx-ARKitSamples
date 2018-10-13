@@ -156,11 +156,20 @@ class VideoPlayerViewController: UIViewController, View {
         sceneView.addGestureRecognizer(pinchGesture)
         pinchGesture.rx.event
             .map({ gesture -> (UIPinchGestureRecognizer, CGFloat) in
-                let scale = gesture.scale
-                return (gesture, scale)
+                (gesture, gesture.scale)
             })
             .do(onNext: { (gesture, _) in gesture.scale = 1.0 })
             .map({ Action.didPinch(scale: $0.1) })
+            .bind(to: action)
+            .disposed(by: disposeBag)
+        let rotationGesture = UIRotationGestureRecognizer()
+        sceneView.addGestureRecognizer(rotationGesture)
+        rotationGesture.rx.event
+            .map({ gesture -> (UIRotationGestureRecognizer, CGFloat) in
+                (gesture, gesture.rotation)
+            })
+            .do(onNext: { (gesture, _) in gesture.rotation = 0 })
+            .map({ Action.didRotate(rotation: $0.1) })
             .bind(to: action)
             .disposed(by: disposeBag)
     }

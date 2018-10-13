@@ -29,6 +29,7 @@ class VideoPlayerViewReactor: Reactor {
         case didRemove(node: SCNNode, planeAnchor: ARPlaneAnchor)
         case didTapSelectablePlane(SelectablePlane)
         case didPinch(scale: CGFloat)
+        case didRotate(rotation: CGFloat)
         
         case run(ARConfiguration, ARSession.RunOptions)
     }
@@ -75,6 +76,8 @@ class VideoPlayerViewReactor: Reactor {
             system.didTapSelectablePlane(plane: plane)
         case let .didPinch(scale):
             system.didPinch(scale: scale)
+        case let .didRotate(rotation):
+            system.didRotate(rotation: rotation)
             
         case let .run(configuration, options):
             return .just(Mutation.run(configuration, options))

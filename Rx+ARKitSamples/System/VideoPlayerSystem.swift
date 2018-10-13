@@ -109,6 +109,12 @@ class VideoPlayerSystem {
         plane.runAction(action)
     }
     
+    func didRotate(rotation: CGFloat) {
+        guard let plane = selectedPlane.value else { return }
+        let action = SCNAction.rotate(by: rotation, around: SCNVector3(0, -1, 0), duration: 0.1)
+        plane.runAction(action)
+    }
+    
     // MARK Update
     func updateSelectablePlane(node: SCNNode, planeAnchor: ARPlaneAnchor) {
         node.selectableplanes.forEach({
