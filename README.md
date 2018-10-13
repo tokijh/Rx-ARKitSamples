@@ -15,10 +15,10 @@ A sample to show how simply ARKit can detect planes.
 
 ![Sample_PlaneDetection](Docs/Sample_PlaneDetection.gif)
 
-### [Video Player](Rx+ARKitSamples/ViewControllers/Samples/VidePlayer)
+### [Video Player](Rx+ARKitSamples/ViewControllers/Samples/VideoPlayer)
 A sample to show Video on virtual world
 
-![Sample_VidePlayer](Docs/Sample_VideoPlayer.gif)
+![Sample_VidepPlayer](Docs/Sample_VideoPlayer.gif)
 
 ## Refer
 [ARKit-Sampler](https://github.com/shu223/ARKit-Sampler)<br>
