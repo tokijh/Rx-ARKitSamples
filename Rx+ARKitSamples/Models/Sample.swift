@@ -16,6 +16,7 @@ public struct Sample {
     enum Controller {
         case simple
         case planeDetection
+        case videoPlayer
     }
 }
 
@@ -24,6 +25,7 @@ extension Sample.Controller {
         switch self {
         case .simple: return SimpleViewController()
         case .planeDetection: return PlaneDetectionViewController()
+        case .videoPlayer: return VideoPlayerViewController()
         }
     }
 }

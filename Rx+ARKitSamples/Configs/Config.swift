@@ -10,6 +10,7 @@ class Config {
     enum Sample: CaseIterable {
         case simple
         case planeDetection
+        case videoPlayer
     }
 }
 
@@ -23,6 +24,9 @@ extension Config.Sample {
             case .planeDetection: return Sample(title: "Plane Detection",
                                                 description: "A sample to show how simply ARKit can detect planes.",
                                                 controller: .planeDetection)
+            case .videoPlayer: return Sample(title: "Video Player",
+                                             description: "A sample to show Video on virtual world",
+                                             controller: .videoPlayer)
             }
         })
     }

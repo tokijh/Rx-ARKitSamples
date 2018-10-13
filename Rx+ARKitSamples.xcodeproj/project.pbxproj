@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		28D158D3B650C32A7B04111D /* Pods_Rx_ARKitSamples.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E843C2888932326479906530 /* Pods_Rx_ARKitSamples.framework */; };
+		6016A4512172154C00AA931C /* VideoNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6016A4502172154C00AA931C /* VideoNode.swift */; };
 		6043B46B2165FAA900BD016D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6043B46A2165FAA900BD016D /* AppDelegate.swift */; };
 		6043B4722165FAAA00BD016D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6043B4712165FAAA00BD016D /* Assets.xcassets */; };
 		6043B4752165FAAA00BD016D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6043B4732165FAAA00BD016D /* LaunchScreen.storyboard */; };
@@ -38,11 +39,19 @@
 		60444A86216CA8AD00A9688A /* PlaneGeometry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60444A85216CA8AD00A9688A /* PlaneGeometry.swift */; };
 		60444A88216CA8C900A9688A /* SCNPlane.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60444A87216CA8C900A9688A /* SCNPlane.swift */; };
 		60444A8A216CB31F00A9688A /* Assets.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = 60444A89216CB31F00A9688A /* Assets.scnassets */; };
+		60444A8E216E0F5900A9688A /* VideoPlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60444A8C216E0F5900A9688A /* VideoPlayerViewController.swift */; };
+		60444A8F216E0F5900A9688A /* VideoPlayerViewReactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60444A8D216E0F5900A9688A /* VideoPlayerViewReactor.swift */; };
+		60444A94216E411B00A9688A /* BorderedPlaneGeometry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60444A93216E411B00A9688A /* BorderedPlaneGeometry.swift */; };
+		60444A96216E43BC00A9688A /* SelectablePlane.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60444A95216E43BB00A9688A /* SelectablePlane.swift */; };
+		60444A98216E43ED00A9688A /* SelectablePlaneGeometry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60444A97216E43ED00A9688A /* SelectablePlaneGeometry.swift */; };
+		60444A9B216E51A500A9688A /* VideoPlayerSystem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60444A9A216E51A500A9688A /* VideoPlayerSystem.swift */; };
 		60F82BB22168A45F00D1BCCF /* BaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60F82BB12168A45F00D1BCCF /* BaseNavigationController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		0718FB275E77D745B3B0A760 /* Pods-Rx+ARKitSamples.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Rx+ARKitSamples.release.xcconfig"; path = "Pods/Target Support Files/Pods-Rx+ARKitSamples/Pods-Rx+ARKitSamples.release.xcconfig"; sourceTree = "<group>"; };
+		6016A44F21720EAF00AA931C /* sample.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = sample.mp4; sourceTree = "<group>"; };
+		6016A4502172154C00AA931C /* VideoNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoNode.swift; sourceTree = "<group>"; };
 		6043B4672165FAA900BD016D /* Rx+ARKitSamples.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Rx+ARKitSamples.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6043B46A2165FAA900BD016D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6043B4712165FAAA00BD016D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -75,6 +84,12 @@
 		60444A85216CA8AD00A9688A /* PlaneGeometry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaneGeometry.swift; sourceTree = "<group>"; };
 		60444A87216CA8C900A9688A /* SCNPlane.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SCNPlane.swift; sourceTree = "<group>"; };
 		60444A89216CB31F00A9688A /* Assets.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = Assets.scnassets; sourceTree = "<group>"; };
+		60444A8C216E0F5900A9688A /* VideoPlayerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoPlayerViewController.swift; sourceTree = "<group>"; };
+		60444A8D216E0F5900A9688A /* VideoPlayerViewReactor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoPlayerViewReactor.swift; sourceTree = "<group>"; };
+		60444A93216E411B00A9688A /* BorderedPlaneGeometry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BorderedPlaneGeometry.swift; sourceTree = "<group>"; };
+		60444A95216E43BB00A9688A /* SelectablePlane.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectablePlane.swift; sourceTree = "<group>"; };
+		60444A97216E43ED00A9688A /* SelectablePlaneGeometry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectablePlaneGeometry.swift; sourceTree = "<group>"; };
+		60444A9A216E51A500A9688A /* VideoPlayerSystem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoPlayerSystem.swift; sourceTree = "<group>"; };
 		60F82BB12168A45F00D1BCCF /* BaseNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNavigationController.swift; sourceTree = "<group>"; };
 		9225FF9BBF4226A12612C447 /* Pods-Rx+ARKitSamples.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Rx+ARKitSamples.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Rx+ARKitSamples/Pods-Rx+ARKitSamples.debug.xcconfig"; sourceTree = "<group>"; };
 		E843C2888932326479906530 /* Pods_Rx_ARKitSamples.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Rx_ARKitSamples.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -126,6 +141,7 @@
 				6043B48A2165FE1B00BD016D /* Configs */,
 				6043B4852165FD9500BD016D /* Services */,
 				6043B495216608E600BD016D /* Extensions */,
+				60444A99216E518D00A9688A /* System */,
 				6043B4822165FCC400BD016D /* Models */,
 				6043B47C2165FBD100BD016D /* ViewControllers */,
 				6043B491216608AB00BD016D /* Views */,
@@ -133,6 +149,7 @@
 				60444A89216CB31F00A9688A /* Assets.scnassets */,
 				6043B4732165FAAA00BD016D /* LaunchScreen.storyboard */,
 				6043B4762165FAAA00BD016D /* Info.plist */,
+				6016A44F21720EAF00AA931C /* sample.mp4 */,
 			);
 			path = "Rx+ARKitSamples";
 			sourceTree = "<group>";
@@ -187,6 +204,7 @@
 			children = (
 				6043B48E2165FFA600BD016D /* Simple */,
 				60444A702169879E00A9688A /* PlaneDetection */,
+				60444A8B216E0F1400A9688A /* VideoPlayer */,
 			);
 			path = Samples;
 			sourceTree = "<group>";
@@ -305,9 +323,30 @@
 			children = (
 				60444A7F216BC70600A9688A /* Plane.swift */,
 				60444A85216CA8AD00A9688A /* PlaneGeometry.swift */,
+				60444A93216E411B00A9688A /* BorderedPlaneGeometry.swift */,
 				60444A81216CA86700A9688A /* MeshPlane.swift */,
+				60444A95216E43BB00A9688A /* SelectablePlane.swift */,
+				60444A97216E43ED00A9688A /* SelectablePlaneGeometry.swift */,
+				6016A4502172154C00AA931C /* VideoNode.swift */,
 			);
 			path = Nodes;
+			sourceTree = "<group>";
+		};
+		60444A8B216E0F1400A9688A /* VideoPlayer */ = {
+			isa = PBXGroup;
+			children = (
+				60444A8C216E0F5900A9688A /* VideoPlayerViewController.swift */,
+				60444A8D216E0F5900A9688A /* VideoPlayerViewReactor.swift */,
+			);
+			path = VideoPlayer;
+			sourceTree = "<group>";
+		};
+		60444A99216E518D00A9688A /* System */ = {
+			isa = PBXGroup;
+			children = (
+				60444A9A216E51A500A9688A /* VideoPlayerSystem.swift */,
+			);
+			path = System;
 			sourceTree = "<group>";
 		};
 		60F82BB02168A44C00D1BCCF /* NavigationController */ = {
@@ -460,6 +499,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				60444A8F216E0F5900A9688A /* VideoPlayerViewReactor.swift in Sources */,
 				6043B4872165FDAA00BD016D /* ServiceType.swift in Sources */,
 				6043B49A2166091100BD016D /* UITableView+Rx.swift in Sources */,
 				60444A86216CA8AD00A9688A /* PlaneGeometry.swift in Sources */,
@@ -467,6 +507,7 @@
 				6043B4892165FDBE00BD016D /* SampleService.swift in Sources */,
 				6043B494216608CE00BD016D /* SampleCell.swift in Sources */,
 				60444A84216CA89500A9688A /* ARSCNPlaneGeometry.swift in Sources */,
+				60444A98216E43ED00A9688A /* SelectablePlaneGeometry.swift in Sources */,
 				6043B4A12166131300BD016D /* SCNView+Rx.swift in Sources */,
 				6043B49C216609D600BD016D /* SampleCellReactor.swift in Sources */,
 				6043B4AB2166138200BD016D /* ARSession+Rx.swift in Sources */,
@@ -475,15 +516,20 @@
 				6043B4812165FC5900BD016D /* SampleListViewReactor.swift in Sources */,
 				6043B48C2165FE2500BD016D /* Config.swift in Sources */,
 				6043B4842165FD5700BD016D /* Sample.swift in Sources */,
+				6016A4512172154C00AA931C /* VideoNode.swift in Sources */,
+				60444A9B216E51A500A9688A /* VideoPlayerSystem.swift in Sources */,
 				60444A74216987C300A9688A /* PlaneDetectionViewReactor.swift in Sources */,
 				6043B47F2165FBF700BD016D /* SampleListViewController.swift in Sources */,
 				6043B4A42166132E00BD016D /* RxSCNSceneRendererDelegateProxy.swift in Sources */,
 				6043B4B0216613C100BD016D /* RxARSessionDelegateProxy.swift in Sources */,
+				60444A8E216E0F5900A9688A /* VideoPlayerViewController.swift in Sources */,
 				60444A88216CA8C900A9688A /* SCNPlane.swift in Sources */,
 				6043B4AD216613A300BD016D /* ARSCNView+Rx.swift in Sources */,
 				60444A72216987B800A9688A /* PlaneDetectionViewController.swift in Sources */,
 				6043B4902165FFC600BD016D /* SimpleViewController.swift in Sources */,
+				60444A94216E411B00A9688A /* BorderedPlaneGeometry.swift in Sources */,
 				6043B46B2165FAA900BD016D /* AppDelegate.swift in Sources */,
+				60444A96216E43BC00A9688A /* SelectablePlane.swift in Sources */,
 				6043B49E2166116500BD016D /* SimpleViewReactor.swift in Sources */,
 				60444A80216BC70600A9688A /* Plane.swift in Sources */,
 				6043B4A62166134800BD016D /* RxCocoa.swift in Sources */,
