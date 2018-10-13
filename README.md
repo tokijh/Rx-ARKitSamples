@@ -4,9 +4,21 @@
 ## RxSwift + ReactorKit + ARKit
 [ARKit](https://developer.apple.com/kr/arkit/) samples used [RxSwift](https://github.com/ReactiveX/RxSwift) and [ReactorKit](https://github.com/ReactorKit/ReactorKit)
 
-## Contents
-### Simple
+## [Contents](Rx+ARKitSamples/ViewControllers/Samples)
+### [Simple](Rx+ARKitSamples/ViewControllers/Samples/Simple)
 Simple ARSCNView
+
+![Sample_Simple](Docs/Sample_Simple.gif)
+
+### [Plane Detection](Rx+ARKitSamples/ViewControllers/Samples/PlaneDetection)
+A sample to show how simply ARKit can detect planes.
+
+![Sample_PlaneDetection](Docs/Sample_PlaneDetection.gif)
+
+### [Video Player](Rx+ARKitSamples/ViewControllers/Samples/VidePlayer)
+A sample to show Video on virtual world
+
+![Sample_VidePlayer](Docs/Sample_VideoPlayer.gif)
 
 ## Refer
 [ARKit-Sampler](https://github.com/shu223/ARKit-Sampler)<br>
