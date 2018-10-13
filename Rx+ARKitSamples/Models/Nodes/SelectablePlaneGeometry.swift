@@ -32,7 +32,17 @@ class SelectablePlaneGeometry: SCNPlane {
     // MARK Selection
     var isSelected: Bool = false {
         didSet {
-            firstMaterial?.diffuse.contents = isSelected ? selectedContents : contents
+            if isShowSelector {
+                firstMaterial?.diffuse.contents = isSelected ? selectedContents : contents
+            } else {
+                firstMaterial?.diffuse.contents = UIColor.clear
+            }
+        }
+    }
+    
+    var isShowSelector: Bool = true {
+        didSet {
+            updateSelection()
         }
     }
     

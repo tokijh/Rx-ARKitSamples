@@ -109,7 +109,7 @@ class VideoPlayerViewReactor: Reactor {
     
     private func setupSystem() {
         system.status
-            .filter({ $0 == VideoPlayerSystem.Status.resizePlane })
+            .filter({ $0 == VideoPlayerSystem.Status.showVideo })
             .map({ _ -> Action in
                 let configuration = ARWorldTrackingConfiguration()
                 let options: ARSession.RunOptions = []

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		28D158D3B650C32A7B04111D /* Pods_Rx_ARKitSamples.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E843C2888932326479906530 /* Pods_Rx_ARKitSamples.framework */; };
+		6016A4512172154C00AA931C /* VideoNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6016A4502172154C00AA931C /* VideoNode.swift */; };
 		6043B46B2165FAA900BD016D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6043B46A2165FAA900BD016D /* AppDelegate.swift */; };
 		6043B4722165FAAA00BD016D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6043B4712165FAAA00BD016D /* Assets.xcassets */; };
 		6043B4752165FAAA00BD016D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6043B4732165FAAA00BD016D /* LaunchScreen.storyboard */; };
@@ -49,6 +50,8 @@
 
 /* Begin PBXFileReference section */
 		0718FB275E77D745B3B0A760 /* Pods-Rx+ARKitSamples.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Rx+ARKitSamples.release.xcconfig"; path = "Pods/Target Support Files/Pods-Rx+ARKitSamples/Pods-Rx+ARKitSamples.release.xcconfig"; sourceTree = "<group>"; };
+		6016A44F21720EAF00AA931C /* sample.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = sample.mp4; sourceTree = "<group>"; };
+		6016A4502172154C00AA931C /* VideoNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoNode.swift; sourceTree = "<group>"; };
 		6043B4672165FAA900BD016D /* Rx+ARKitSamples.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Rx+ARKitSamples.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6043B46A2165FAA900BD016D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6043B4712165FAAA00BD016D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -146,6 +149,7 @@
 				60444A89216CB31F00A9688A /* Assets.scnassets */,
 				6043B4732165FAAA00BD016D /* LaunchScreen.storyboard */,
 				6043B4762165FAAA00BD016D /* Info.plist */,
+				6016A44F21720EAF00AA931C /* sample.mp4 */,
 			);
 			path = "Rx+ARKitSamples";
 			sourceTree = "<group>";
@@ -323,6 +327,7 @@
 				60444A81216CA86700A9688A /* MeshPlane.swift */,
 				60444A95216E43BB00A9688A /* SelectablePlane.swift */,
 				60444A97216E43ED00A9688A /* SelectablePlaneGeometry.swift */,
+				6016A4502172154C00AA931C /* VideoNode.swift */,
 			);
 			path = Nodes;
 			sourceTree = "<group>";
@@ -511,6 +516,7 @@
 				6043B4812165FC5900BD016D /* SampleListViewReactor.swift in Sources */,
 				6043B48C2165FE2500BD016D /* Config.swift in Sources */,
 				6043B4842165FD5700BD016D /* Sample.swift in Sources */,
+				6016A4512172154C00AA931C /* VideoNode.swift in Sources */,
 				60444A9B216E51A500A9688A /* VideoPlayerSystem.swift in Sources */,
 				60444A74216987C300A9688A /* PlaneDetectionViewReactor.swift in Sources */,
 				6043B47F2165FBF700BD016D /* SampleListViewController.swift in Sources */,
