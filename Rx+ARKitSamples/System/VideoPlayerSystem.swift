@@ -103,6 +103,12 @@ class VideoPlayerSystem {
         selectedPlane.accept(plane)
     }
     
+    func didPinch(scale: CGFloat) {
+        guard let plane = selectedPlane.value else { return }
+        let action = SCNAction.scale(by: scale, duration: 0.1)
+        plane.runAction(action)
+    }
+    
     // MARK Update
     func updateSelectablePlane(node: SCNNode, planeAnchor: ARPlaneAnchor) {
         node.selectableplanes.forEach({

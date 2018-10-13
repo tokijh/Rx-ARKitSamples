@@ -152,5 +152,16 @@ class VideoPlayerViewController: UIViewController, View {
             .map({ Action.didTapSelectablePlane($0) })
             .bind(to: action)
             .disposed(by: disposeBag)
+        let pinchGesture = UIPinchGestureRecognizer()
+        sceneView.addGestureRecognizer(pinchGesture)
+        pinchGesture.rx.event
+            .map({ gesture -> (UIPinchGestureRecognizer, CGFloat) in
+                let scale = gesture.scale
+                return (gesture, scale)
+            })
+            .do(onNext: { (gesture, _) in gesture.scale = 1.0 })
+            .map({ Action.didPinch(scale: $0.1) })
+            .bind(to: action)
+            .disposed(by: disposeBag)
     }
 }
